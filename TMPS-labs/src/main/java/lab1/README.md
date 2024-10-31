@@ -1,5 +1,4 @@
-# Implementation of 2 SOLID letters in a simple project
-
+# Creational Design Patterns
 
 ## Author: Ecaterina Munteanu
 
