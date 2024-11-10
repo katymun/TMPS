@@ -1,19 +1,21 @@
-package lab1.domain.models;
+package lab2.domain.models;
 
-import lab1.domain.Vehicle;
+import lab2.domain.Vehicle;
 
-public class Car implements Vehicle {
+public class Car extends Vehicle {
     private String color;
     private int wheels;
     private int seats;
 
-    public Car(String color, int wheels, int seats) {
+    public Car(String color, int wheels, int seats, Engine engine) {
         this.color = color;
         this.wheels = wheels;
         this.seats = seats;
+        this.engine = engine;
     }
 
-    public Car() {}
+    public Car() {
+    }
 
     public String getColor() {
         return color;
@@ -46,6 +48,6 @@ public class Car implements Vehicle {
 
     @Override
     public Vehicle clone() {
-        return new Car(color, wheels, seats);
+        return new Car(color, wheels, seats, engine);
     }
 }

@@ -1,8 +1,8 @@
-package lab1.domain.models;
+package lab2.domain.models;
 
-import lab1.domain.Vehicle;
+import lab2.domain.Vehicle;
 
-public class Truck implements Vehicle {
+public class Truck extends Vehicle {
     private String color;
     private int wheels;
     private int seats;
@@ -13,6 +13,7 @@ public class Truck implements Vehicle {
         this.wheels = wheels;
         this.seats = seats;
         this.weight = weight;
+        this.engine = engine;
     }
 
     public Truck() {
