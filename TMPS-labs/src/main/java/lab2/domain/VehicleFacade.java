@@ -1,6 +1,7 @@
 package lab2.domain;
 
 import lab2.domain.factory.EngineType;
+import lab2.domain.factory.VehicleType;
 import lab2.domain.models.impl.*;
 import lab2.domain.models.impl.Motorcycle;
 import lab2.domain.models.intf.Vehicle;
@@ -9,20 +10,22 @@ import lab2.domain.models.impl.Truck;
 import lab2.domain.models.impl.PetrolEngine;
 import lab2.domain.models.impl.ElectricEngine;
 
+import static lab2.domain.factory.VehicleType.CAR;
+
 public class VehicleFacade {
     private Vehicle vehicle;
 
-    public void configureVehicle(String type, String color, int wheels, int seats, double weight, EngineType engineType) {
+    public void configureVehicle(VehicleType type, String color, int wheels, int seats, double weight, EngineType engineType) {
         Engine engine = createEngine(engineType);
 
-        switch (type.toLowerCase()) {
-            case "car":
+        switch (type) {
+            case CAR:
                 vehicle = new Car(color, wheels, seats, engine);
                 break;
-            case "motorcycle":
+            case MOTORCYCLE:
                 vehicle = new Motorcycle(color, engine);
                 break;
-            case "truck":
+            case TRUCK:
                 vehicle = new Truck(color, wheels, seats, weight, engine);
                 break;
             default:
