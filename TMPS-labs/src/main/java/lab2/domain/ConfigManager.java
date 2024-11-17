@@ -1,4 +1,4 @@
-package lab1.domain;
+package lab2.domain;
 
 public class ConfigManager {
     private static ConfigManager instance;

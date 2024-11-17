@@ -1,2 +1,5 @@
-package lab2.domain.factory;public class EngineType {
+package lab2.domain.factory;
+
+public enum EngineType {
+    PETROL, ELECTRIC;
 }

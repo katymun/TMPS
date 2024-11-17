@@ -1,6 +1,6 @@
-package lab2.domain;
+package lab2.domain.models.intf;
 
-import lab2.domain.models.Engine;
+import lab2.domain.models.intf.Engine;
 
 public abstract class Vehicle {
     protected Engine engine;
@@ -20,5 +20,13 @@ public abstract class Vehicle {
 
     public void stopVehicle() {
         engine.stopEngine();
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 }

@@ -1,6 +1,7 @@
-package lab2.domain.models;
+package lab2.domain.models.impl;
 
-import lab2.domain.Vehicle;
+import lab2.domain.models.intf.Engine;
+import lab2.domain.models.intf.Vehicle;
 
 public class Motorcycle extends Vehicle {
     private String color;

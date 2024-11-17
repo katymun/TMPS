@@ -1,6 +1,7 @@
-package lab2.domain.models;
+package lab2.domain.models.impl;
 
-import lab2.domain.Vehicle;
+import lab2.domain.models.intf.Vehicle;
+import lab2.domain.models.intf.Engine;
 
 public class Truck extends Vehicle {
     private String color;
@@ -8,7 +9,7 @@ public class Truck extends Vehicle {
     private int seats;
     private double weight;
 
-    public Truck(String color, int wheels, int seats, double weight) {
+    public Truck(String color, int wheels, int seats, double weight, Engine engine) {
         this.color = color;
         this.wheels = wheels;
         this.seats = seats;
@@ -58,6 +59,6 @@ public class Truck extends Vehicle {
 
     @Override
     public Vehicle clone() {
-        return new Truck(color, wheels, seats, weight);
+        return new Truck(color, wheels, seats, weight, engine);
     }
 }

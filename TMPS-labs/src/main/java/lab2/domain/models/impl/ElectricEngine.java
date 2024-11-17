@@ -1,4 +1,6 @@
-package lab2.domain.models;
+package lab2.domain.models.impl;
+
+import lab2.domain.models.intf.Engine;
 
 public class ElectricEngine implements Engine {
     @Override
