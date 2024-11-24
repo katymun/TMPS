@@ -106,7 +106,31 @@ public abstract class Vehicle {
 ```
 
 ## Results
+```
+--- Configuring a Car ---
+Configured a CAR with PETROL engine.
+Car with color: red, wheels: 4, seats: 5
+Starting petrol engine...
+Stopping petrol engine...
 
+--- Configuring a Truck ---
+Configured a TRUCK with ELECTRIC engine.
+Truck with color: blue, wheels: 6, seats: 2, weight: 12000.5
+Starting electric engine...
+Stopping electric engine...
+
+--- Using Proxy for restricted access ---
+
+Admin tries to operate:
+Car with color: green, wheels: 4, seats: 5
+Starting petrol engine...
+Stopping petrol engine...
+
+User tries to operate:
+Car with color: green, wheels: 4, seats: 5
+Access Denied: Only admin users can start the vehicle.
+Access Denied: Only admin users can stop the vehicle.
+```
 
 ## Conclusion
 
