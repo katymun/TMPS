@@ -1,4 +1,4 @@
-# Topic: * Design Patterns*
+# Topic: *Design Patterns*
 Author: *Munteanu Ecaterina*
 ------
 ## Objectives:
@@ -9,7 +9,7 @@ Author: *Munteanu Ecaterina*
 3. Implement some additional functionalities using behavioral design patterns.
 
 ## Used Design Pattern
-~~ **Iterator**: ~~
+**Iterator**:
    - Lets you traverse elements of a collection without exposing its underlying representation.
    - Encapsulates all of the traversal details, such as the current position and how many elements are left till the end.
      
@@ -17,8 +17,6 @@ Author: *Munteanu Ecaterina*
 
 ### Iterator Pattern
 The Iterator pattern was used to traverse the VehicleList collection. This pattern ensures clean and reusable traversal logic.
-
-#### Code Snippet
 ```java
 public interface VehicleIterator {
     Vehicle getNext();
@@ -26,32 +24,6 @@ public interface VehicleIterator {
     int getCurrentPosition();
     Vehicle getCurrent();
     boolean hasMore();
-}
-```
-
-### 2. Proxy Pattern
-The VehicleProxy enforces role-based access control, ensuring only admins can operate vehicles.
-
-#### Code Snippet
-```java
-public class VehicleProxy extends Vehicle {
-    private final Vehicle realVehicle;
-    private final String userRole;
-
-    public VehicleProxy(Vehicle realVehicle, String userRole) {
-        super(realVehicle.getEngine());
-        this.realVehicle = realVehicle;
-        this.userRole = userRole;
-    }
-
-    @Override
-    public void startVehicle() {
-        if (isAdmin()) {
-            realVehicle.startVehicle();
-        } else {
-            System.out.println("Access Denied: Only admin users can start the vehicle.");
-        }
-    }
 }
 ```
 This interface has the main methods that an iterator needs to work properly.
