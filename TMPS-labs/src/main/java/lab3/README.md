@@ -28,7 +28,7 @@ public interface VehicleIterator {
 ```
 This interface has the main methods that an iterator needs to work properly.
 Now, the next step is to implement it:
-```
+```java
 public class VehicleListIterator implements VehicleIterator {
     private final List<Vehicle> vehicles;
     private int currentPosition = 0;
@@ -45,7 +45,7 @@ public class VehicleListIterator implements VehicleIterator {
 }
 ```
 Now, let's create an interface for our vehicle collection, which will have a method for returning the iterator:
-```
+```java
 public interface VehicleCollection {
     void addVehicle(Vehicle vehicle);
     void removeVehicle(Vehicle vehicle);
@@ -54,7 +54,7 @@ public interface VehicleCollection {
 ```
 It also has the key methods, like addVehicle() and removeVehicle(), for manipulating the internal list, and the most important part - createIterator().
 Its implementation will hold the list:
-```
+```java
 public class VehicleList implements VehicleCollection {
     private final List<Vehicle> vehicles;
 
@@ -62,7 +62,7 @@ public class VehicleList implements VehicleCollection {
 }
 ```
 And finally, in the client class, we will test this iterator:
-```
+```java
 Vehicle firstVehicle = vehicleIterator.getCurrent();
 System.out.println("First vehicle in the iterator: ");
 firstVehicle.displayInfo();
